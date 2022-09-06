@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    user-select: none;
+}
+
+.alertContainer{
+    margin: 20.1vh 20.1vw;
+    height: 59.8vh;
+    width: 59.8vw;
+    border-radius: 8vh;
+
+    background: linear-gradient(rgb(251, 110, 155, 0.7), rgb(131, 116, 247));
+    position: fixed;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+input{
+    height: 30vh;
+    width: 30vw;
+    left: 35vw;
+    top: 35vh;
+    text-align: center;
+
+    background: linear-gradient(-45deg, rgb(128, 221, 182), rgb(255, 122, 253, 0.4));
+    position: fixed;
+    outline: none;
+    border: none;
+    border-radius: 5vh;
+
+    color: rgb(202, 43, 93);
+    font-size: 16vh;
+    font-weight: 300;
+    font-family: 'Berkshire Swash', cursive;
+
+    caret-color: rgb(255, 255, 255);
+}
+
+button{
+    height: 10vh;
+    width: 30vw;
+    left: 35vw;
+    top: 66vh;
+    text-align: center;
+
+    background: linear-gradient(-45deg, rgb(133, 155, 231, 0.5), rgb(107, 215, 217, 0.8));
+    position: fixed;
+    outline: none;
+    border: none;
+    border-radius: 3vh;
+
+    color: rgb(255, 255, 255);
+    font-size: 6vh;
+    font-weight: 300;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+button:hover{
+    color: #c01e8d;
+
+    box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+}
+
+.mainContainer{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    display: grid;
+    grid-template-columns: [start-col] 1000px [end-col];
+    grid-template-rows: [start-row] auto [row-one] auto [row-two] auto [end-row];
+    row-gap: 20px;
+    place-content: center;
+    place-items: stretch;
+    color: #c01e8d;
+
+    animation: colorflow 8s ease-in infinite forwards;
+    background: linear-gradient(-45deg, #003cff, #ff00ae);
+    background-size: 400% 400%;
+}
+
+.headContainer{
+    padding: 10px;
+    background: linear-gradient(90deg, #a2b8ff, #fb90ff);
+    border-radius: 15px;
+
+    font-size: 60px;
+    font-family: 'Berkshire Swash', cursive;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: 4px;
+
+    height: fit-content;
+    font-weight: 900;
+}
+
+.bodyContainer{
+    display: grid;
+    grid-template-columns: [start-body-col] repeat(9, 82px [body-col]) 82px [end-body-col];
+    column-gap: 20px;
+}
+
+.button{
+    height: 230px;
+    background: linear-gradient(90deg, #a2b8ff, #fb90ff);
+    background-clip: text;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    border-radius: 12px 50px;
+    border: 5px solid rgb(255, 145, 251);
+    color: transparent;
+}
+
+.command{
+    color: inherit;
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Berkshire Swash', cursive;
+
+}
+
+.button:hover{
+    color: rgb(208, 229, 255);
+    border: 3px solid rgb(255, 191, 248);
+    box-shadow: 6px 6px 0px 0px rgb(255, 191, 248);
+}
+
+.footContainer{
+    background: linear-gradient(90deg, #a2b8ff, #fb90ff);
+    border-radius: 15px;
+
+    height: fit-content;
+
+    font-weight: 900;
+    padding: 10px;
+    font-size: 60px;
+    font-family: 'Berkshire Swash', cursive;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    letter-spacing: 6px;
+
+    color: #6c2dc4;
+}
+
+@keyframes colorflow{
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+}

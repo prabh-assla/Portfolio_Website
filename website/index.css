@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    cursor: url("Icons/pointer_CURSOR.svg"), pointer;
+}
+
+body{
+    overflow: hidden;
+}
+
+.mainContainer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 0.5vh 0.5vw;
+    background-color: #0E0B16;
+
+    display: grid;
+    grid-template: [row-start-main] repeat(50, 1.49vh [row-main]) / [column-start-main] repeat(50, 1.49vw [column-main]);
+    gap: 0.5vh 0.5vw;
+    place-items: center;
+}
+
+.dots{
+    height: 1.5vh;
+    width: 1.5vw;
+    background-color: rgba(161, 57, 202);
+    border-radius: 0.4vh;
+    transition: transform 200ms ease-in-out;
+    animation: dotRotate 2s linear infinite;
+}
+
+.dotsies{
+    height: 1vh;
+    width: 20vh;
+    border-radius: 1vh;
+    background-color: rgb(255, 196, 0);
+    border-radius: 1vh;
+    transition: transform 400ms ease-in-out;
+    animation: dotsiesRotate 3s linear infinite;
+}
+
+@keyframes dotsiesRotate{
+    to{
+        transform: rotate(-1turn);
+    }
+}
+
+.navBar{
+    position: fixed;
+    height: 5vh;
+    width: 80vw;
+    left: 10vw;
+    top: 3vh;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto [col]) ;
+    grid-template-rows: repeat(4, 1.67vh [row]);
+    column-gap: 0.3vh;
+}
+
+.navItem{
+    width: 18vw;
+    height: 5vh;
+    background-color: #E7DFDD;
+    border-radius: 3vh;
+    font-family: 'Berkshire Swash', cursive;
+    color: #4717F6;
+    font-size: 5vh;
+    left: 6vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.navItem:hover{
+    background-color: rgb(255, 196, 0);
+}
+
+.navItem:active{
+    outline: 0.5vh solid rgb(255, 255, 255);
+}
+
+.navItem > div{
+    position: relative;
+    top: -0.45vh;
+}
+
+.info{
+    position: relative;
+    background-color: #ffc400;
+    height: min-content;
+    width: 79vw;
+    margin: 0 auto;
+    top: 4vmax;
+    left: -1vmax;
+    border-radius: 3vh;
+    padding: 2vh;
+    display: none;
+}
+
+.biodata{
+    font-family: 'Berkshire Swash', cursive;
+    color: #3700ff;
+    text-shadow: 10pxz 10px #e469f7;
+    font-size: 5vh;
+    display: none;
+}
+
+.contactsdata{
+    display: none;
+}
+
+._biodata, .profileLink{
+    font-family: 'Berkshire Swash', cursive;
+    color: #ff0000;
+    text-shadow: 0.2vmax 0.2vmax #e469f7;
+    font-size: 5vh;
+    text-decoration: none;
+}
+
+.profileLink:hover{
+    color: black;
+}
+
+.profileLink:active{
+    text-shadow: 0.2vmax 0.2vmax 90px #88079b;
+}
+
+img{
+    background-color: wheat;
+    border-radius: 1vh;
+    padding: 6px;
+    position: relative;
+    top: 1vmax;
+}
+
+.projectsLinks{
+    display: none;
+}
+
+.projectLINK{
+    font-family: 'Berkshire Swash', cursive;
+    color: red;
+    text-shadow: 0.2vmax 0.2vmax #e469f7;
+    font-size: 5vh;
+    text-decoration: none;
+}
+
+.projectLINK:hover{
+    color: black;
+}
+
+.projectLINK:active{
+    text-shadow: 0.2vmax 0.2vmax 90px #88079b;
+}
+
+.logo{
+    height: 6vmax;
+    width: 6vmax;
+}
+
+.profilePIC{
+    height: 40vh;
+    width: 40vh;
+}

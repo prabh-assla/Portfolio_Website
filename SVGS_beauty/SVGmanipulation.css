@@ -1,0 +1,132 @@
+:root{
+    --toLeft: -3em;
+}
+
+img{
+    height: 36vh;
+    width: 18vw;
+}
+
+.side:hover img{
+    height: 60vh;
+    width: 60vw;
+}
+
+.smallCubes{
+    position: fixed;
+    top: 30vh;
+    height: 40vh;
+    width: 100vw;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(97, 96, 157, 0.813);
+    border-radius: 3vh;
+}
+
+.right{
+    width: 40.9vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(171, 104, 97, 0.815);
+    border-radius: 3vh;
+}
+
+.left > .cube{
+    position: relative;
+}
+
+.right > .cube{
+    position: relative;
+}
+
+#smallCube1, #smallCube6{
+    scale: 0.2;
+    animation: rotateCubea 6s ease-in-out infinite alternate;
+}
+
+#smallCube2, #smallCube5{
+    scale: 0.4;
+    animation: rotateCubeb 6s ease-in-out infinite alternate;
+}
+
+#smallCube3, #smallCube4{
+    scale: 0.6;
+    animation: rotateCubec 6s ease-in-out infinite alternate;
+}
+
+#smallCube1{
+    left: -15em;
+}
+
+#smallCube2{
+    left: -52em;
+}
+
+#smallCube3{
+    left: -69em;
+}
+
+#smallCube4{
+    left: 69em;
+}
+
+#smallCube5{
+    left: 52em;
+}
+
+#smallCube6{
+    left: 15em;
+}
+
+.blue > .side{
+    border-color: rgb(36, 59, 152);
+    border-style: double;
+    background-color: rgba(236, 123, 123, 0.378);
+    background-image: url('./SVGs/bluish.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.brown > .side{
+    border-color: rgb(117, 25, 25);
+    border-style: double;
+    background-color: rgba(114, 138, 236, 0.348);
+    background-image: url('./SVGs/brownish.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes rotateCubea{
+    to{
+        transform: rotate3d(1, 1, 0, 415deg);
+    }
+}
+
+@keyframes rotateCubeb{
+    to{
+        transform: rotate3d(0, 1, 1, 415deg);
+    }
+}
+
+@keyframes rotateCubec{
+    to{
+        transform: rotate3d(1, 0, 1, 415deg);
+    }
+}
